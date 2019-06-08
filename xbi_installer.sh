@@ -66,7 +66,9 @@ function download_node() {
   cd $TMP_FOLDER >/dev/null 2>&1
   wget -q $COIN_TGZ
   compile_error
-  tar xvzf $COIN_ZIP -C $COIN_PATH >/dev/null 2>&1
+  unzip $COIN_ZIP
+  mv xbid $COIN_PATH
+  mv xbi-cli $COIN_PATH
   compile_error
   cd - >/dev/null 2>&1
   rm -rf $TMP_FOLDER >/dev/null 2>&1
